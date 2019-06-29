@@ -1,0 +1,20 @@
+
+//working well for any single sentence entered in chat box
+formData = Map();
+messageType = message.get("text");
+param = Map();
+param.put("content-type","application/json");
+param.put("text","" + messageType);
+param.put("api_key","xxxxxxxxxxx");
+param.put("lang_code","en");
+request = invokeurl
+[
+	url :"https://apis.paralleldots.com/v3/sentiment"
+	type :POST
+	parameters:param
+];
+//info request;
+result = request.get("sentiment");
+//info result;
+formData.put("text","" + result);
+return formData;
