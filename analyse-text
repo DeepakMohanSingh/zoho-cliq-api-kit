@@ -1,4 +1,3 @@
-
 //working well for any single sentence entered in chat box
 formData = Map();
 messageType = message.get("text");
