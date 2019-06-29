@@ -1,0 +1,16 @@
+
+formData = Map();
+messageType = message.get("text");
+param = Map();
+param.put("content-type","application/json");
+param.put("text","" + messageType);
+param.put("api_key","xxxxxxxxxxxx");
+request = invokeurl
+[
+	url :"https://apis.paralleldots.com/v3/intent"
+	type :POST
+	parameters:param
+];
+result = request.get("intent");
+formData.put("text","" + result);
+return formData;
